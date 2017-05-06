@@ -24,7 +24,7 @@ install:
 
 script:
   - cd cuttlefish/
-  - cmake . -DCMAKE_INSTALL_PREFIX=/usr
+  - cmake . -DCMAKE_INSTALL_PREFIX=/usr -DASSIMP_BIN_INSTALL_DIR=`pwd`
   - make -j4
   - make DESTDIR=appdir install ; find appdir/
 
