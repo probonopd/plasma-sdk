@@ -23,6 +23,7 @@ install:
   - # cd ../..
 
 script:
+  - cd cuttlefish/
   - cmake . -DCMAKE_INSTALL_PREFIX=/usr
   - make -j4
   - make DESTDIR=appdir install ; find appdir/
